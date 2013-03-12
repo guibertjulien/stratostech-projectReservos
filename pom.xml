@@ -38,16 +38,15 @@
 			<scope>provided</scope>
 		</dependency>
 		<!-- Other Google -->
-<!-- 		<dependency>
-			<groupId>com.google.gwt.google-apis</groupId>
-			<artifactId>gwt-ajaxloader</artifactId>
-			<version>1.1.0</version>
-		</dependency> -->
-		<!-- <dependency>
+		<!-- <dependency> <groupId>com.google.gwt.google-apis</groupId> <artifactId>gwt-ajaxloader</artifactId> 
+			<version>1.1.0</version> </dependency> -->
+		<!-- <dependency> <groupId>com.github.rwl</groupId> <artifactId>gwt-maps</artifactId> 
+			<version>3.8.0-pre1</version> </dependency> -->
+		<dependency>
 			<groupId>com.github.rwl</groupId>
 			<artifactId>gwt-maps</artifactId>
 			<version>3.8.0-pre1</version>
-		</dependency>-->
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

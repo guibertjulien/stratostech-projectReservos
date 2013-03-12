@@ -9,6 +9,10 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class HomeViewImpl extends Composite implements IHomeView {
 
+	private Presenter presenter;
+
+	private EventBus eventBus;
+	
 	private static HomeViewImplUiBinder uiBinder = GWT.create(HomeViewImplUiBinder.class);
 
 	interface HomeViewImplUiBinder extends UiBinder<Widget, HomeViewImpl> {
@@ -22,13 +26,14 @@ public class HomeViewImpl extends Composite implements IHomeView {
 	}
 
 	public void setPresenter(Presenter presenter) {
-		// TODO Auto-generated method stub
+		this.presenter = presenter;
+		formSearch.setPresenter(presenter);
 		
 	}
 
 	public void setEventBus(EventBus eventBus) {
-		// TODO Auto-generated method stub
-		
+		this.eventBus = eventBus;
+		formSearch.setEventBus(eventBus);
 	}
 
 	public void init() {

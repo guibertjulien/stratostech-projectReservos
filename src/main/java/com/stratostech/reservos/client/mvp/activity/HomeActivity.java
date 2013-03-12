@@ -7,6 +7,7 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.stratostech.reservos.client.ClientFactory;
 import com.stratostech.reservos.client.mvp.place.HomePlace;
+import com.stratostech.reservos.client.serviceApi.MapsService;
 import com.stratostech.reservos.client.ui.home.IHomeView;
 
 public class HomeActivity extends TwgAbstractActivity implements IHomeView.Presenter {
@@ -35,7 +36,8 @@ public class HomeActivity extends TwgAbstractActivity implements IHomeView.Prese
 
 		panel.setWidget(homeView.asWidget());
 
-		//MapsService.initializePlaceSearchBox();
+		MapsService.setEventBus(eventBus);
+		MapsService.initializePlaceSearchBox();
 	}
 
 	/**
