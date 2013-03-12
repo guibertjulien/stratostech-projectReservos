@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.headerPanel {
+			background: #444;
+		}
+	</ui:style>
+	<g:HorizontalPanel spacing="2" width="100%"
+		horizontalAlignment="ALIGN_RIGHT" verticalAlignment="ALIGN_MIDDLE"
+		styleName="{style.headerPanel}" height="100%">
+		<g:Cell width="1%">
+			<g:Hyperlink text="Home" targetHistoryToken="home:"/>
+		</g:Cell>
+		<g:Button ui:field="button_Sign">
+			<nobr>Sign In</nobr>
+		</g:Button>
+		<g:Cell width="1%">
+			<g:Button ui:field="button_BusinessSign">
+				<nobr>Business Sign Up</nobr>
+			</g:Button>
+		</g:Cell>
+		<g:Cell width="1%">
+			<g:ListBox ui:field="listBox_langue" />
+		</g:Cell>
+	</g:HorizontalPanel>
+</ui:UiBinder> 

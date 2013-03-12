@@ -1,0 +1,145 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+
+	<ui:with field='resources' type='com.stratostech.reservos.client.ui.resources.Resources' />
+
+	<g:TabLayoutPanel barUnit='EM' barHeight='0'
+		ui:field="tabLayoutPanel_form" animationDuration="1000" width="100%"
+		height="100%">
+		<g:tab>
+			<g:header>
+				Page1
+			</g:header>
+			<g:VerticalPanel width="100%" height="100%"
+				styleName="{resources.styleWidget.mainPanel}" horizontalAlignment="ALIGN_CENTER"
+				verticalAlignment="ALIGN_MIDDLE">
+				<g:VerticalPanel horizontalAlignment="ALIGN_LEFT"
+					styleName="{resources.styleWidget.formPanel}" width="600px"
+					height="400px">
+					<g:Cell height="1%">
+						<g:HorizontalPanel styleName="{resources.styleWidget.headerPanel}"
+						width="100%">
+						<g:Label text="Create your business Account In" styleName="{resources.styleWidget.title1}" />
+					</g:HorizontalPanel>
+					</g:Cell>
+					<g:VerticalPanel spacing="2" width="100%">
+						<g:CaptionPanel captionText="New panel"
+						captionHTML="Create your Reservos site address">
+						<g:Grid width="5cm" height="3cm">
+							<g:row>
+								<g:customCell>
+									<g:Label text="Username / Business Name" wordWrap="false" />
+								</g:customCell>
+								<g:customCell>
+									<g:TextBox />
+								</g:customCell>
+								<g:customCell>
+									<g:Label text=".reservos.com" />
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Password" />
+								</g:customCell>
+								<g:customCell>
+									<g:PasswordTextBox />
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Retype password" />
+								</g:customCell>
+								<g:customCell>
+									<g:PasswordTextBox />
+								</g:customCell>
+							</g:row>
+						</g:Grid>
+					</g:CaptionPanel>
+						<g:CaptionPanel captionText="Create your administration account">
+						<g:Grid width="5cm" height="3cm">
+							<g:row>
+								<g:customCell>
+									<g:Label text="Your name" wordWrap="false" />
+								</g:customCell>
+								<g:customCell>
+									<g:TextBox />
+								</g:customCell>
+								<g:customCell>
+									<g:TextBox />
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Email address" wordWrap="false" />
+								</g:customCell>
+								<g:customCell>
+									<g:TextBox />
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Profession" />
+								</g:customCell>
+								<g:customCell>
+									<g:ListBox />
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Country" />
+								</g:customCell>
+								<g:customCell>
+									<g:ListBox />
+								</g:customCell>
+							</g:row>
+						</g:Grid>
+					</g:CaptionPanel>
+						<g:CheckBox
+							text="I have read and agree to the Provide Subscription Agreement terms"
+							wordWrap="false" />
+					</g:VerticalPanel>
+					<g:Cell height="1%" verticalAlignment="ALIGN_BOTTOM">
+						<g:HorizontalPanel styleName="{resources.styleWidget.actionPanel}"
+						spacing="2" width="100%" horizontalAlignment="ALIGN_CENTER">
+						<g:Button ui:field="button">Create my account</g:Button>
+					</g:HorizontalPanel>
+					</g:Cell>
+				</g:VerticalPanel>
+			</g:VerticalPanel>
+		</g:tab>
+		<g:tab>
+			<g:header>
+				Page2
+			</g:header>
+			<g:VerticalPanel width="100%" height="100%"
+				styleName="{resources.styleWidget.mainPanel}" horizontalAlignment="ALIGN_CENTER"
+				verticalAlignment="ALIGN_MIDDLE">
+				<g:VerticalPanel horizontalAlignment="ALIGN_LEFT"
+					styleName="{resources.styleWidget.formPanel}" width="600px"
+					height="400px">
+					<g:Cell height="1%">
+						<g:HorizontalPanel styleName="{resources.styleWidget.headerPanel}"
+						width="100%">
+						<g:Label text="Congratulation" styleName="{resources.styleWidget.title1}" />
+					</g:HorizontalPanel>
+					</g:Cell>
+					<g:VerticalPanel spacing="2">
+						<g:Label text="TODO" />
+						<g:Label text="Your unique booking URL :" wordWrap="false" />
+						<g:Hyperlink targetHistoryToken="home:"
+							text="http://demo.reservos.com">
+						</g:Hyperlink>
+						<g:Label text="You can manage from business from here :"
+							height="" />
+						<g:Hyperlink text="http://demo.reservos.com/admin"
+						targetHistoryToken="home:" />
+					</g:VerticalPanel>
+				</g:VerticalPanel>
+			</g:VerticalPanel>
+		</g:tab>
+	</g:TabLayoutPanel>
+</ui:UiBinder> 
