@@ -14,6 +14,8 @@ public interface IBusinessView extends IsWidget {
 
 	public interface Presenter {
 		void goTo(Place place);
+
+		void createBusiness();
 	}
 
 }

@@ -13,6 +13,10 @@ import com.stratostech.reservos.client.ui.AbstractForm;
 
 public class QuickAccount extends AbstractForm implements IBusinessView {
 
+	private Presenter presenter;
+
+	private EventBus eventBus;
+
 	private static quickAccountUiBinder uiBinder = GWT.create(quickAccountUiBinder.class);
 
 	@UiField
@@ -29,17 +33,18 @@ public class QuickAccount extends AbstractForm implements IBusinessView {
 
 	@UiHandler("button")
 	void onButtonClick(ClickEvent event) {
+
+		presenter.createBusiness();
+
 		tabLayoutPanel_form.selectTab(1);
 	}
 
 	public void setPresenter(Presenter presenter) {
-		// TODO Auto-generated method stub
-
+		this.presenter = presenter;
 	}
 
 	public void setEventBus(EventBus eventBus) {
-		// TODO Auto-generated method stub
-
+		this.eventBus = eventBus;
 	}
 
 	public void init() {

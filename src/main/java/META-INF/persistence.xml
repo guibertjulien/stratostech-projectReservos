@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="projetReservosJPA"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+		<class>com.stratostech.reservos.server.entity.Business</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="com.google.appengine.api.rdbms.AppEngineDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:google:rdbms://tripwego:test/reservos" />
+			<property name="javax.persistence.jdbc.user" value="" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="eclipselink.target-database" value="MySQL" />
+			<property name="eclipselink.platform.class.name"
+				value="org.eclipse.persistence.platform.database.MySQLPlatform" />
+
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -2,12 +2,18 @@ package com.stratostech.reservos.client.mvp.activity;
 
 import java.util.logging.Logger;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.Place;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
+import com.stratostech.reservos.client.BusinessService;
+import com.stratostech.reservos.client.BusinessServiceAsync;
 import com.stratostech.reservos.client.ClientFactory;
 import com.stratostech.reservos.client.mvp.place.BusinessPlace;
 import com.stratostech.reservos.client.ui.business.IBusinessView;
+import com.stratostech.reservos.shared.dto.BusinessDto;
 
 public class BusinessActivity extends TwgAbstractActivity implements IBusinessView.Presenter {
 
@@ -18,6 +24,8 @@ public class BusinessActivity extends TwgAbstractActivity implements IBusinessVi
 	public BusinessActivity(BusinessPlace place, ClientFactory clientFactory) {
 		this.clientFactory = clientFactory;
 	}
+
+	private final BusinessServiceAsync businessDao = GWT.create(BusinessService.class);
 
 	/**
 	 * Invoked by the ActivityManager to start a new Activity
@@ -50,5 +58,21 @@ public class BusinessActivity extends TwgAbstractActivity implements IBusinessVi
 	 */
 	public void goTo(Place place) {
 		clientFactory.getPlaceController().goTo(place);
+	}
+
+	public void createBusiness() {
+
+		BusinessDto businessDto = new BusinessDto(null, "Stratos");
+
+		businessDao.createBusiness(businessDto, new AsyncCallback<Void>() {
+
+			public void onSuccess(Void arg0) {
+				Window.alert("Create OK");
+			}
+
+			public void onFailure(Throwable arg0) {
+				Window.alert("Error BD");
+			}
+		});
 	}
 }

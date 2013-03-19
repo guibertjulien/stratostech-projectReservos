@@ -9,6 +9,10 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class BusinessViewImpl extends Composite implements IBusinessView {
 
+	private Presenter presenter;
+
+	private EventBus eventBus;
+
 	private static BusinessViewImplUiBinder uiBinder = GWT.create(BusinessViewImplUiBinder.class);
 
 	interface BusinessViewImplUiBinder extends UiBinder<Widget, BusinessViewImpl> {
@@ -22,13 +26,13 @@ public class BusinessViewImpl extends Composite implements IBusinessView {
 	}
 
 	public void setPresenter(Presenter presenter) {
-		// TODO Auto-generated method stub
-
+		this.presenter = presenter;
+		quickAccount.setPresenter(presenter);
 	}
 
 	public void setEventBus(EventBus eventBus) {
-		// TODO Auto-generated method stub
-
+		this.eventBus = eventBus;
+		quickAccount.setEventBus(eventBus);
 	}
 
 	public void init() {

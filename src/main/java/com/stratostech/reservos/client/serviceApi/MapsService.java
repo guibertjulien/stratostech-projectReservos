@@ -95,7 +95,6 @@ public abstract class MapsService {
 		try {
 			placeResultModel.setRating(String.valueOf(placeResult.getRating()));
 		} catch (Exception e) {
-			// Bug corrigé : rating peut être 'undefined'
 			placeResultModel.setRating(String.valueOf(""));
 		}
 		

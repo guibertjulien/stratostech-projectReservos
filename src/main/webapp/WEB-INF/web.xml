@@ -10,10 +10,20 @@
     <servlet-name>greetServlet</servlet-name>
     <servlet-class>com.stratostech.reservos.server.GreetingServiceImpl</servlet-class>
   </servlet>
+  
+    <servlet>
+    <servlet-name>businessServlet</servlet-name>
+    <servlet-class>com.stratostech.reservos.server.dao.BusinessServiceImpl</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/Reservos/greet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>businessServlet</servlet-name>
+    <url-pattern>/Reservos/business</url-pattern>
   </servlet-mapping>
 
   <!-- Default page to serve -->
